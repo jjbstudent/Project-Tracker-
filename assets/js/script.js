@@ -1,8 +1,14 @@
 console.log("test")
 
 // Create a header/hero area that welcomes users to the application and displays the current time and date using day.js with `setInterval()`.
+function updateTimer() {
+    $("#time-heading").text(dayjs().format("DD MM YYYY [at] hh:mm:ss a"));
+  }
+  // Update the timer every second
+  setInterval(updateTimer, 1000);
+  // Initial update
+  updateTimer();
 
-// 2. Create a Bootstrap card component explaining the instructions of how to use the app and a button to open a [Bootstrap modal dialog](https://getbootstrap.com/docs/5.3/components/modal/#how-it-works).
 
 // 3. The modal should contain a form asking users to fill in the following data:
 
