@@ -1,3 +1,18 @@
-body{
-    background-color: beige;
+:root {
+    --body-background-color: lightgrey;
+  }
+  body {
+    background-color: var(--body-background-color);
+  }
+  .modal-body {
+    background-color: var(--body-background-color);
+  }
+  .modal-body label {
+    font-weight: bold;
+  }
+  ul {
+    list-style-type: none;
 }
+
+
+  
