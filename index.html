@@ -16,15 +16,15 @@
   <body>
   <!--Header includes time and and date-->
   <div class="container-fluid">
-    <div class="row border-bottom bg-dark text-light">
+    <div class="row border-bottom bg-dark text-light"> <!--first row contains the time-->
       <div class="col-12">
         <h1 class="text-center">Project Tracker</h1>
         <h2 class="text-center">Current time and date:</h2>
         <h3 id="time-heading" class="text-center"></h3>
       </div>
     </div>
-    <div class="row">
-      <div class="col-md-3 col-12 mt-3"> <!--sizing the card 1/4 of page width-->
+    <div class="row"> <!--second row-->
+      <div class="col-md-3 col-12 mt-3"> <!--sizing the card 1/4 of page width--2nd row /1st col-->
         <div class="card">
             <h4 class="card-header bg-dark text-light">Instructions</h4>
             <div class="card-body">
@@ -36,13 +36,31 @@
                 <li>Hourly Rate</li>
               </ul>
             </div>
-            <button class="btn btn-dark card-footer">Add Project</button>
+            <button class="btn btn-dark card-footer" data-bs-toggle="modal" data-bs-target="#exampleModal">Add Project</button>
           </div>
         </div>
-        <div class="col mt-3">
-          <table class="table table-striped">
-            <thead>
-              <tr>
+        <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+        <div class="col mt-3"> <!--2nd row / 2nd col-->
+          <table class="table table-striped"> <!--striped table-->
+            <thead> <!--table headings only-->
+              <tr> <!--Scope means headers for table with no -->
                 <th scope="col">Project name</th>
                 <th scope="col">Project type</th>
                 <th scope="col">Hourly Rate (£)</th>
@@ -53,30 +71,14 @@
             </thead>
             <tbody>
               <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-                <td></td>
-                <td></td>
-                <td></td>
+              
+               
               </tr>
               <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-                <td></td>
-                <td></td>
-                <td></td>
+               
               </tr>
               <tr>
-                <th scope="row">3</th>
-                <td colspan="2">Larry the Bird</td>
-                <td>@twitter</td>
-                <td></td>
-                <td></td>
-                <td></td>
+               
               </tr>
             </tbody>
           </table>
