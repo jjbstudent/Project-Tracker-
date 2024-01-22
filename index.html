@@ -16,15 +16,15 @@
   <body>
   <!--Header includes time and and date-->
   <div class="container-fluid">
-    <div class="row border-bottom bg-dark text-light">
+    <div class="row border-bottom bg-dark text-light"> <!--first row contains the time-->
       <div class="col-12">
         <h1 class="text-center">Project Tracker</h1>
         <h2 class="text-center">Current time and date:</h2>
         <h3 id="time-heading" class="text-center"></h3>
       </div>
     </div>
-    <div class="row">
-      <div class="col-md-3 col-12 mt-3"> <!--sizing the card 1/4 of page width-->
+    <div class="row"> <!--second row-->
+      <div class="col-md-3 col-12 mt-3"> <!--sizing the card 1/4 of page width--2nd row /1st col-->
         <div class="card">
             <h4 class="card-header bg-dark text-light">Instructions</h4>
             <div class="card-body">
@@ -32,17 +32,59 @@
               <ul>
                 <li>Project Name</li>
                 <li>Project Type</li>
-                <li>Due Date</li>
                 <li>Hourly Rate</li>
+                <li>Due Date</li>
               </ul>
             </div>
-            <button class="btn btn-dark card-footer">Add Project</button>
+            <button class="btn btn-dark card-footer" data-bs-toggle="modal" data-bs-target="#project-form">Add Project</button> <!--button targets project-form modal-->
           </div>
         </div>
-        <div class="col mt-3">
-          <table class="table table-striped">
-            <thead>
-              <tr>
+        <!-- Modal -->
+<div class="modal fade" id="project-form" tabindex="-1" aria-labelledby="project-model" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header bg-dark text-light">
+        <h1 class="modal-title fs-5">Add a Project</h1>
+        <button type="button" class="btn text-light" data-bs-dismiss="modal" aria-label="Close">X</button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="newProjectName" class="form-label">New project Name</label>
+            <input type="text" class="form-control" id="newProjectName" aria-describedby="newProject">
+          </div>
+          <div class="mb-3">
+            <label for="newProjectType" class="form-label">Project Type</label>
+            <select class="form-select" id="newProjectType" aria-describedby="newProjectType">
+              <option>Front End</option>
+              <option>Back End</option>
+              <option>Full Stack</option>
+              <option>Print</option>
+              <option>Two</option>
+              <option>Three</option>
+            </select> <!--remove lable and add a drop down-->
+          </div>
+          <div class="mb-3">
+            <label for="newProjecthourlyRate" class="form-label">Hourly Rate</label>
+            <input type="number" class="form-control" id="newProjecthourlyRate">
+          </div>
+          <div class="mb-3">
+            <label for="newProjectdueDate" class="form-label">Due Date</label>
+            <input type="date" class="form-control" id="newProjectdueDate" aria-describedby="newProjectdueDate">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary  bg-dark text-light">Add Project</button>
+      </div>
+    </div>
+  </div>
+</div>
+        <div class="col mt-3"> <!--2nd row / 2nd col-->
+          <table class="table table-striped"> <!--striped table-->
+            <thead> <!--table headings only-->
+              <tr> <!--Scope means headers for table with no styling/plain headergit  -->
                 <th scope="col">Project name</th>
                 <th scope="col">Project type</th>
                 <th scope="col">Hourly Rate (£)</th>
@@ -53,30 +95,14 @@
             </thead>
             <tbody>
               <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-                <td></td>
-                <td></td>
-                <td></td>
+              
+               
               </tr>
               <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-                <td></td>
-                <td></td>
-                <td></td>
+               
               </tr>
               <tr>
-                <th scope="row">3</th>
-                <td colspan="2">Larry the Bird</td>
-                <td>@twitter</td>
-                <td></td>
-                <td></td>
-                <td></td>
+               
               </tr>
             </tbody>
           </table>
