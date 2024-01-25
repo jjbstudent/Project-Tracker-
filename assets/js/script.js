@@ -12,6 +12,10 @@ updateTimer();
 //Create a function to print the data on the table 
 function printProjectData(name,type,hourly,due) {
   //1.Create element (new Table Row)
+  var dueDateDayjs = dayjs(due); //added dayjs
+  var daysLeft = dueDateDayjs.diff(dayjs(),"day"); //display day left
+  var potentialEarnings = daysLeft*8*hourly; // 8 working hours per day
+
   var newTr = $("<tr>"); // Table Row
   var nameTd = $("<td>"); // table data
   var typeTd = $("<td>"); 
@@ -24,9 +28,9 @@ function printProjectData(name,type,hourly,due) {
   nameTd.text(name);
   typeTd.text(type);
   hourlyTd.text(hourly);
-  dueTd.text(due);
-  // daysLeftTd.text(daysLeft);
-  // earningsTd.text(earnings);
+  dueTd.text(dueDateDayjs.format("DD/MM/YYYY")); //show the due date and format
+  daysLeftTd.text(daysLeft);
+  earningsTd.text(potentialEarnings.toFixed(2));
   // deleteTD.text();
   //3.append (select the information you want to append)
   newTr.append(nameTd,typeTd,hourlyTd,dueTd,daysLeftTd,earningsTd,deleteTD);
