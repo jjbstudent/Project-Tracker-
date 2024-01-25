@@ -9,27 +9,16 @@ function updateTimer() {
   // Initial update
   updateTimer();
 
+$("form").on("submit",function (event) {
+    event.preventDefault();
+    var newProjectName = $("#newProjectName").val();
+    var newProjectType = $("#newProjectType").val();
+    var newProjectHourly = $("#newProjectHourly").val();
+    var newProjectDue = $("#newProjectDue").val();
+    console.log('newProjectName', newProjectName)
+    console.log('newProjectType', newProjectType)
+    console.log('newProjectHourly', newProjectHourly)
+    console.log('newProjectDue', newProjectDue)
 
-// 3. The modal should contain a form asking users to fill in the following data:
 
-//     * The name of the project
-
-//     * The type of project (use a `<select>` drop-down)
-
-//     * The hourly wage for the project
-
-//     * The due date for the project (use jQuery UI's datepicker with a minimum date setting in place)
-
-// 4. Include a Bootstrap table that the project's information can be printed to with columns for the following data:
-
-//     * Project name
-
-//     * Project type
-
-//     * Hourly wage
-
-//     * Due date
-
-//     * Days until the due date (use day.js to calculate)
-
-//     * Estimated total earned (hourly wage at 8 hours per day multiplied by the number of days until the due date)
+})

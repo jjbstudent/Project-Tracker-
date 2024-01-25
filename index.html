@@ -40,15 +40,15 @@
           </div>
         </div>
         <!-- Modal -->
-<div class="modal fade" id="project-form" tabindex="-1" aria-labelledby="project-model" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header bg-dark text-light">
-        <h1 class="modal-title fs-5">Add a Project</h1>
+        <div class="modal fade" id="project-form" tabindex="-1" aria-labelledby="project-model" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+             <div class="modal-header bg-dark text-light">
+              <h2 class="modal-title fs-5">Add a Project</h2>
         <button type="button" class="btn text-light" data-bs-dismiss="modal" aria-label="Close">X</button>
       </div>
-      <div class="modal-body">
-        <form>
+      <form>
+        <div class="modal-body">
           <div class="mb-3">
             <label for="newProjectName" class="form-label">New project Name</label>
             <input type="text" class="form-control" id="newProjectName" aria-describedby="newProject">
@@ -57,7 +57,7 @@
             <label for="newProjectType" class="form-label">Project Type</label>
             <select class="form-select" id="newProjectType" aria-describedby="newProjectType">
               <option>Front End</option>
-              <option>Back End</option>
+              <option>Back End</option>A
               <option>Full Stack</option>
               <option>Print</option>
               <option>Two</option>
@@ -65,22 +65,22 @@
             </select> <!--remove lable and add a drop down-->
           </div>
           <div class="mb-3">
-            <label for="newProjecthourlyRate" class="form-label">Hourly Rate</label>
-            <input type="number" class="form-control" id="newProjecthourlyRate">
+            <label for="newProjectHourly" class="form-label">Hourly Rate</label>
+            <input type="number" class="form-control" id="newProjectHourly">
           </div>
           <div class="mb-3">
-            <label for="newProjectdueDate" class="form-label">Due Date</label>
-            <input type="date" class="form-control" id="newProjectdueDate" aria-describedby="newProjectdueDate">
+            <label for="newProjectdue" class="form-label">Due Date</label>
+            <input type="date" class="form-control" id="newProjectdue" aria-describedby="newProjectdueDate">
           </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary  bg-dark text-light">Add Project</button>
-      </div>
-    </div>
-  </div>
-</div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary  bg-dark text-light">Add Project</button>
+          </div>
+        </div>
+      </form>
+        </div>    
+        </div>
+        </div>
         <div class="col mt-3"> <!--2nd row / 2nd col-->
           <table class="table table-striped"> <!--striped table-->
             <thead> <!--table headings only-->
