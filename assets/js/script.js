@@ -30,7 +30,7 @@ function printProjectData(name,type,hourly,due) {
   hourlyTd.text(hourly);
   dueTd.text(dueDateDayjs.format("DD/MM/YYYY")); //show the due date and format
   daysLeftTd.text(daysLeft);
-  earningsTd.text(potentialEarnings.toFixed(2));
+  earningsTd.text(potentialEarnings.toLocaleString("en-US", {style:"currency", currency:"USD"}));
   // deleteTD.text();
   //3.append (select the information you want to append)
   newTr.append(nameTd,typeTd,hourlyTd,dueTd,daysLeftTd,earningsTd,deleteTD);
