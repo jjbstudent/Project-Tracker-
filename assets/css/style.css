@@ -14,5 +14,12 @@
     list-style-type: none;
 }
 
+  .delete-btn {
+    cursor: pointer ;
+  }
+
+  .delete-btn:hover {
+    opacity: 0.5;
+  }
 
   

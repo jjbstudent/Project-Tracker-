@@ -31,7 +31,9 @@ function printProjectData(name,type,hourly,due) {
   dueTd.text(dueDateDayjs.format("DD/MM/YYYY")); //show the due date and format
   daysLeftTd.text(daysLeft);
   earningsTd.text(potentialEarnings.toFixed(2));
-  // deleteTD.text();
+  deleteTD.text("X");
+  deleteTD.addClass(" delete-btn"); // delete button added in TD
+
   //3.append (select the information you want to append)
   newTr.append(nameTd,typeTd,hourlyTd,dueTd,daysLeftTd,earningsTd,deleteTD);
   $("tbody").append(newTr); // adding the new table row within table body area
@@ -63,3 +65,7 @@ $("form").on("submit", function (event) {
     newProjectHourly,
     newProjectDue)
 });
+$('table').on('click','.delete-btn',function(event){
+  var thisButton = $(event.target);
+  thisButton.parent().remove();
+})
