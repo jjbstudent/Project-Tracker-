@@ -8,7 +8,7 @@ This mini-project involves collaborating with team members to develop a project 
 
 This mini-project consists of four tasks. Focus on the first three tasks to achieve the Minimum Viable Product (MVP).
 
-Open and preview website : 
+Open and preview website : https://jjbstudent.github.io/Project-Tracker-/
 
 ### Task 1: HTML Build
 
